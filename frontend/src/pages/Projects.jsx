@@ -2,23 +2,23 @@ const PROJECTS = [
   {
     title: "To-do App (Fullstack)",
     description:
-      "CRUD, login (JWT), React + Node/Express + Postgres. CI/CD og Docker-compose.",
+      "CRUD, login (JWT), React + Node/Express + Postgres. CI/CD and Docker Compose.",
     tags: ["React", "Node", "Postgres", "JWT"],
     github: "https://github.com/Hajrudin27/my-todo-app",
     demo: "#",
   },
   {
-    title: "Offentlige Data Dashboard",
+    title: "Public Data Dashboard",
     description:
-      "Interaktive grafer og filtre på dataset fra data.gov.dk. Visualisering med Chart.js.",
+      "Interactive charts and filters using an open dataset from data.gov.dk. Chart.js visualizations.",
     tags: ["React", "FastAPI", "Chart.js"],
     github: "https://github.com/Hajrudin27/data-dashboard",
     demo: "#",
   },
   {
-    title: "Chat-app (WebSockets)",
+    title: "Chat App (WebSockets)",
     description:
-      "Real-time chat med flere brugere. Fokus på netværksprogrammering.",
+      "Real-time chat with multiple users. Focus on network programming.",
     tags: ["Node", "WebSockets"],
     github: "https://github.com/Hajrudin27/chat-app",
     demo: "#",
@@ -29,13 +29,12 @@ export default function Projects() {
   return (
     <section className="max-w-6xl mx-auto p-6">
       <header className="mb-6">
-        <h1 className="text-3xl font-bold tracking-tight">Projekter</h1>
+        <h1 className="text-3xl font-bold tracking-tight">Projects</h1>
         <p className="text-neutral-600 dark:text-neutral-300">
-          Udvalgte projekter med links til GitHub og (hvis muligt) live demo.
+          Selected projects with links to GitHub and (if available) a live demo.
         </p>
       </header>
 
-      {/* Auto-fit columns (>=260px each) so it adapts from 1 → 2 → 3+ */}
       <div className="grid gap-5 [grid-template-columns:repeat(auto-fit,minmax(260px,1fr))]">
         {PROJECTS.map((p) => (
           <article

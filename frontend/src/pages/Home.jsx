@@ -13,22 +13,21 @@ export default function Home() {
 
           {/* Text */}
           <div>
-            <h1 className="text-3xl font-bold tracking-tight">Hej, jeg er Hajrudin</h1>
+            <h1 className="text-3xl font-bold tracking-tight">Hi, I’m Hajrudin</h1>
             <p className="mt-1 text-neutral-700 dark:text-neutral-300">
-              Diplomingeniør-studerende i softwareteknologi (3. semester).
-              Jeg bygger projekter i React/Node og lærer nyt hver uge.
+              Software engineering student (3rd semester). I build projects with React/Node and learn something new every week.
             </p>
 
             {/* Availability badge */}
             <div className="mt-2 inline-flex items-center gap-2 rounded-md bg-green-50 text-green-700 dark:bg-green-900/30 dark:text-green-300 px-3 py-1 text-sm">
               <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse" aria-hidden="true"></span>
-              <span>Open to student assistant roles (8–20 hrs/week)</span>
+              <span>Open to student assistant roles (10–15 hrs/week)</span>
             </div>
 
             {/* Buttons */}
             <div className="mt-4 flex flex-wrap gap-3">
               <Link to="/projects" className="px-4 py-2 rounded-md text-white bg-blue-600 hover:bg-blue-700">
-                Se projekter
+                View projects
               </Link>
               <a
                 href="https://github.com/Hajrudin27"
@@ -39,7 +38,7 @@ export default function Home() {
                 GitHub
               </a>
               <a
-                href="https://linkedin.com/in/DIT-LINK"
+                href="https://linkedin.com/in/YOUR-LINK"
                 target="_blank"
                 rel="noreferrer"
                 className="px-4 py-2 rounded-md border border-blue-200 text-blue-600 hover:bg-blue-50 dark:border-neutral-700 dark:hover:bg-neutral-800"
@@ -47,7 +46,7 @@ export default function Home() {
                 LinkedIn
               </a>
               <a
-                href="mailto:din@mail.dk"
+                href="mailto:your@email.com"
                 className="px-4 py-2 rounded-md border border-blue-200 text-blue-600 hover:bg-blue-50 dark:border-neutral-700 dark:hover:bg-neutral-800"
               >
                 Email

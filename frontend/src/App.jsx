@@ -64,7 +64,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/about" element={<About />} />
-            <Route path="*" element={<div className="text-neutral-500">Siden blev ikke fundet.</div>} />
+            <Route path="*" element={<div className="text-neutral-500">Page not found.</div>} />
           </Routes>
         </main>
         <Footer />
