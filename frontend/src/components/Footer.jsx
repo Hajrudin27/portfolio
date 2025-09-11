@@ -9,11 +9,11 @@ export default function Footer() {
           GitHub
         </a>
         <span className="text-neutral-300">•</span>
-        <a href="https://linkedin.com/in/DIT-LINK" target="_blank" rel="noreferrer" className="hover:underline">
+        <a href="https://www.linkedin.com/in/hajrudin-kardasevic-582452346/" target="_blank" rel="noreferrer" className="hover:underline">
           LinkedIn
         </a>
         <span className="text-neutral-300">•</span>
-        <a href="mailto:din@mail.dk" className="hover:underline">Email</a>
+        <a href="mailto:hajrokardas@gmail.com" className="hover:underline">Email</a>
       </div>
     </footer>
   );
