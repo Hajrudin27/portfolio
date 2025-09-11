@@ -3,6 +3,7 @@ import { Routes, Route, NavLink } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import Projects from './pages/Projects.jsx'
 import About from './pages/About.jsx'
+import Contact from './pages/Contact.jsx'
 
 export default function App() {
   const [theme, setTheme] = useState('light')
@@ -42,6 +43,9 @@ export default function App() {
             <NavLink to="/about" className={({ isActive }) => `${linkBase} ${isActive ? linkActive : linkInactive}`}>
               About
             </NavLink>
+            <NavLink to="/contact" className={({ isActive }) => `${linkBase} ${isActive ? linkActive : linkInactive}`}>
+              Contact
+            </NavLink>
 
             <div className="ml-auto">
               <button
@@ -61,6 +65,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<div className="text-neutral-500">Siden blev ikke fundet.</div>} />
           </Routes>
         </main>
