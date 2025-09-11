@@ -1,4 +1,35 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Contact() {
+  const navigate = useNavigate();
+
+  // helper til at encode form-data som Netlify forventer
+  const encode = (data) =>
+    new URLSearchParams(data).toString();
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": "contact",
+          "bot-field": form["bot-field"]?.value || "",
+          name: form.name.value,
+          email: form.email.value,
+          message: form.message.value,
+        }),
+      });
+      navigate("/success"); // SPA-route (vores React-side)
+    } catch (err) {
+      alert("Noget gik galt. Prøv igen senere.");
+      console.error(err);
+    }
+  }
+
   return (
     <section className="max-w-3xl mx-auto p-6">
       <h1 className="text-3xl font-bold mb-2">Kontakt</h1>
@@ -9,16 +40,12 @@ export default function Contact() {
       <form
         name="contact"
         method="POST"
-        action="/success.html"
         data-netlify="true"
         netlify-honeypot="bot-field"
+        onSubmit={handleSubmit}
         className="grid gap-4 border rounded-xl p-4 bg-white dark:bg-neutral-900"
       >
-        <input type="hidden" name="form-name" value="contact" />
-        {/* ...resten af felterne... */}
-        </form>
-        
-        {/* Netlify kræver disse to felter */}
+        {/* krævet for Netlify Forms */}
         <input type="hidden" name="form-name" value="contact" />
         <p className="hidden">
           <label>
