@@ -4,6 +4,8 @@ import Home from './pages/Home.jsx'
 import Projects from './pages/Projects.jsx'
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
+import Success from './pages/Success.jsx'
+
 
 export default function App() {
   const [theme, setTheme] = useState('light')
@@ -66,6 +68,7 @@ export default function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/success" element={<Success />} />
             <Route path="*" element={<div className="text-neutral-500">Siden blev ikke fundet.</div>} />
           </Routes>
         </main>

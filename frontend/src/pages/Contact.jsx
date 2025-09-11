@@ -45,6 +45,7 @@ export default function Contact() {
         onSubmit={handleSubmit}
         className="grid gap-4 border rounded-xl p-4 bg-white dark:bg-neutral-900"
       >
+        
         {/* krævet for Netlify Forms */}
         <input type="hidden" name="form-name" value="contact" />
         <p className="hidden">
