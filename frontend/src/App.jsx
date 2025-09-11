@@ -1,35 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route, NavLink } from 'react-router-dom'
+import Home from './pages/Home'
+import Projects from './pages/Projects'
+import About from './pages/About'
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const linkBase =
+    'px-3 py-1 rounded-md text-sm transition-colors';
+  const linkInactive =
+    'text-blue-600 hover:bg-blue-50';
+  const linkActive =
+    'bg-blue-600 text-white';
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1 className="text-3xl font-bold text-blue-600">Hello Portfolio!</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="min-h-screen bg-white">
+      <header className="border-b">
+        <nav className="max-w-4xl mx-auto px-4 py-3 flex items-center gap-2">
+          <NavLink
+            to="/"
+            end
+            className={({ isActive }) =>
+              `${linkBase} ${isActive ? linkActive : linkInactive}`
+            }
+          >
+            Home
+          </NavLink>
+
+          <NavLink
+            to="/projects"
+            className={({ isActive }) =>
+              `${linkBase} ${isActive ? linkActive : linkInactive}`
+            }
+          >
+            Projects
+          </NavLink>
+
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `${linkBase} ${isActive ? linkActive : linkInactive}`
+            }
+          >
+            About
+          </NavLink>
+        </nav>
+      </header>
+
+      <main className="max-w-4xl mx-auto px-4 py-6">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<div className="text-neutral-700">Siden blev ikke fundet.</div>} />
+        </Routes>
+      </main>
+    </div>
   )
 }
-
-export default App
