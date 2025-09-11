@@ -27,47 +27,60 @@ const PROJECTS = [
 
 export default function Projects() {
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-1">Projekter</h1>
-      <p className="text-neutral-700 mb-6">
-        Udvalgte projekter med links til GitHub og (hvis muligt) live demo.
-      </p>
+    <section className="max-w-6xl mx-auto p-6">
+      <header className="mb-6">
+        <h1 className="text-3xl font-bold tracking-tight">Projekter</h1>
+        <p className="text-neutral-600 dark:text-neutral-300">
+          Udvalgte projekter med links til GitHub og (hvis muligt) live demo.
+        </p>
+      </header>
 
-      <div className="grid sm:grid-cols-2 gap-4">
+      {/* Auto-fit columns (>=260px each) so it adapts from 1 → 2 → 3+ */}
+      <div className="grid gap-5 [grid-template-columns:repeat(auto-fit,minmax(260px,1fr))]">
         {PROJECTS.map((p) => (
-          <div key={p.title} className="border rounded-xl p-4 bg-white shadow-sm">
-            <h2 className="font-semibold text-lg">{p.title}</h2>
-            <p className="text-sm text-neutral-700 mt-1">{p.description}</p>
+          <article
+            key={p.title}
+            className="group h-full rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-4 shadow-sm hover:shadow-md transition-shadow"
+          >
+            <h2 className="font-semibold text-lg leading-snug">{p.title}</h2>
 
-            <div className="flex flex-wrap gap-2 mt-3">
+            <p className="mt-2 text-sm text-neutral-700 dark:text-neutral-300">
+              {p.description}
+            </p>
+
+            <ul className="mt-3 flex flex-wrap gap-2">
               {p.tags.map((t) => (
-                <span key={t} className="text-xs px-2 py-1 rounded-full bg-blue-50 text-blue-700">
+                <li
+                  key={t}
+                  className="text-xs px-2 py-1 rounded-full bg-blue-50 text-blue-700 dark:bg-neutral-800 dark:text-blue-300"
+                >
                   {t}
-                </span>
+                </li>
               ))}
-            </div>
+            </ul>
 
-            <div className="flex items-center gap-3 mt-4">
+            <div className="mt-4 flex items-center gap-3">
               <a
                 href={p.github}
                 target="_blank"
                 rel="noreferrer"
-                className="text-sm text-blue-600 hover:underline"
+                className="text-sm font-medium text-blue-600 dark:text-blue-400 underline-offset-4 hover:underline"
               >
                 GitHub
               </a>
+              <span className="text-neutral-300">•</span>
               <a
                 href={p.demo}
                 target="_blank"
                 rel="noreferrer"
-                className="text-sm text-blue-600 hover:underline"
+                className="text-sm font-medium text-blue-600 dark:text-blue-400 underline-offset-4 hover:underline"
               >
                 Demo
               </a>
             </div>
-          </div>
+          </article>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
