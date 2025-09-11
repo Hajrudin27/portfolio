@@ -37,11 +37,12 @@ export default function Home() {
           Email
         </a>
         <a
-          href="#"
+          href="/cv.pdf"
+          download
           className="px-3 py-1 rounded-md text-white bg-blue-600 hover:bg-blue-700"
-        >
+>
           Download CV
-        </a>
+      </a>
       </div>
     </section>
   );
