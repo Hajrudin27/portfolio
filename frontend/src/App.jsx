@@ -3,7 +3,7 @@ import { Routes, Route, NavLink } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import Projects from './pages/Projects.jsx'
 import About from './pages/About.jsx'
-
+import Footer from './components/Footer.jsx'
 
 
 export default function App() {
@@ -67,6 +67,7 @@ export default function App() {
             <Route path="*" element={<div className="text-neutral-500">Siden blev ikke fundet.</div>} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </div>
   )
