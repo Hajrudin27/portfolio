@@ -14,6 +14,10 @@ export default function Contact() {
         netlify-honeypot="bot-field"
         className="grid gap-4 border rounded-xl p-4 bg-white dark:bg-neutral-900"
       >
+        <input type="hidden" name="form-name" value="contact" />
+        {/* ...resten af felterne... */}
+        </form>
+        
         {/* Netlify kræver disse to felter */}
         <input type="hidden" name="form-name" value="contact" />
         <p className="hidden">
