@@ -32,21 +32,21 @@ export default function Home() {
               <a
                 href="https://github.com/Hajrudin27"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="px-4 py-2 rounded-md border border-blue-200 text-blue-600 hover:bg-blue-50 dark:border-neutral-700 dark:hover:bg-neutral-800"
               >
                 GitHub
               </a>
               <a
-                href="https://linkedin.com/in/YOUR-LINK"
+                href="https://www.linkedin.com/in/hajrudin-kardasevic-582452346/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="px-4 py-2 rounded-md border border-blue-200 text-blue-600 hover:bg-blue-50 dark:border-neutral-700 dark:hover:bg-neutral-800"
               >
                 LinkedIn
               </a>
               <a
-                href="mailto:your@email.com"
+                href="mailto:hajrokardas@gmail.com"
                 className="px-4 py-2 rounded-md border border-blue-200 text-blue-600 hover:bg-blue-50 dark:border-neutral-700 dark:hover:bg-neutral-800"
               >
                 Email
