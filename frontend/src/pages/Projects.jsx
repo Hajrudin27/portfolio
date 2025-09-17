@@ -23,6 +23,14 @@ const PROJECTS = [
     github: "https://github.com/Hajrudin27/chat-app",
     demo: "#",
   },
+  {
+    title: "Website for Local Business",
+    description:
+      "CRUD, login (JWT), React + Node/Express + Postgres. CI/CD and Docker Compose.",
+    tags: ["React", "Node", "Postgres", "JWT"],
+    github: "https://github.com/Hajrudin27/my-todo-app",
+    demo: "#",
+  },
 ];
 
 export default function Projects() {
